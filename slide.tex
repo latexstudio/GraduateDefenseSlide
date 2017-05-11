@@ -1,0 +1,87 @@
+\documentclass{beamer}
+\usepackage[UTF8]{ctex}
+
+\usetheme{metropolis}
+\setbeamerfont{title}{size=\zihao 4}
+\usepackage{appendixnumberbeamer}
+\usepackage{amsmath}
+\usepackage{enumerate}
+
+
+\title{基于Spatial-Spark网络空间海量数据分析与挖掘}
+\author[高峰]{
+    \makebox[2.5em][s]{姓名:} \makebox[3em][s]{高峰}\\
+    \makebox[2.5em][s]{导师:} \makebox[3em][s]{高井祥} \\
+    \makebox[2.5em][s]{} \makebox[3em]{孙久运} \\
+    \makebox[2.5em][s]{专业:} \makebox[10em][l]{大地测量学与测量工程}\\
+}
+\date{}
+\titlegraphic{\hfill\includegraphics[height=1.5cm]{figures/cumt.pdf}}
+
+\begin{document}
+% make title
+\maketitle
+
+% make content
+\begin{frame}{提纲}
+  \setbeamertemplate{section in toc}[sections numbered]
+  \tableofcontents[hideallsubsections]
+\end{frame}
+
+\section{绪论}
+
+\begin{frame}{绪论}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+        \includegraphics[scale=0.3]{figures/smartcity.jpg}
+        \end{column}
+
+        \begin{column}{0.5\textwidth}
+        \textbf{智慧城市:} 
+        
+        数字城市、物联网、云计算
+        % \includegraphics[scale=0.2]{figures/smartcity.jpg}
+        \vspace{2em}
+
+        \pause
+        \alert{数字城市}
+        \begin{itemize}
+        \pause
+        \item 空间信息快速获取技术
+        \pause
+        \item 海量空间数据管理
+        \pause
+        \item 空间信息可视化技术
+        \pause
+        \item 空间数据分析挖掘和网络服务技术
+        \end{itemize}
+        \end{column}
+   \end{columns}
+\end{frame}
+
+\begin{frame}{绪论}
+    \textbf{移动互联网发展(LBS)}
+
+    打车软件、O2O软件、社交网络软件
+
+    \vspace{2em}
+    \pause
+    \textbf{意义}
+    \begin{itemize}
+        \pause
+        \item 对个人而言，对社交空间数据挖掘，可以发现不同的知识，为生活带来 便利
+        \pause
+        \item 对商业公司而言，通过空间数据挖掘发现目标客户使用习惯或群体性活 动规律，对商业推广计划提出指导性意见
+        \pause
+        \item 对政府决策部门而言，能够发现社会的经济、文化、交通等众多方面活动规律
+    \end{itemize}
+\end{frame}
+
+
+\section{相关技术}
+\section{Spatial-Spark}
+\section{POI空间分析}
+\section{人口流动网络分析}
+\section{总结}
+\section*{参考文献}
+\end{document}
