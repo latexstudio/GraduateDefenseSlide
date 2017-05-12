@@ -6,6 +6,12 @@
 \usepackage{appendixnumberbeamer}
 \usepackage{amsmath}
 \usepackage{enumerate}
+\usepackage{tabu}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usetikzlibrary{matrix,calc,shapes,backgrounds,patterns,positioning,decorations.pathreplacing}
 
 
 \title{基于Spatial-Spark网络空间海量数据分析与挖掘}
@@ -28,60 +34,86 @@
   \tableofcontents[hideallsubsections]
 \end{frame}
 
-\section{绪论}
+% \section{绪论}
 
-\begin{frame}{绪论}
-    \begin{columns}
-        \begin{column}{0.5\textwidth}
-        \includegraphics[scale=0.3]{figures/smartcity.jpg}
-        \end{column}
+% \begin{frame}{绪论}
+%     \begin{columns}
+%         \begin{column}{0.5\textwidth}
+%         \includegraphics[scale=0.3]{figures/smartcity.jpg}
+%         \end{column}
 
-        \begin{column}{0.5\textwidth}
-        \textbf{智慧城市:} 
+%         \begin{column}{0.5\textwidth}
+%         \textbf{智慧城市:} 
         
-        数字城市、物联网、云计算
-        % \includegraphics[scale=0.2]{figures/smartcity.jpg}
-        \vspace{2em}
+%         数字城市、物联网、云计算
+%         % \includegraphics[scale=0.2]{figures/smartcity.jpg}
+%         \vspace{2em}
 
-        \pause
-        \alert{数字城市}
-        \begin{itemize}
-        \pause
-        \item 空间信息快速获取技术
-        \pause
-        \item 海量空间数据管理
-        \pause
-        \item 空间信息可视化技术
-        \pause
-        \item 空间数据分析挖掘和网络服务技术
-        \end{itemize}
-        \end{column}
-   \end{columns}
-\end{frame}
+%         \pause
+%         \alert{数字城市}
+%         \begin{itemize}
+%         \pause
+%         \item 空间信息快速获取技术
+%         \pause
+%         \item 海量空间数据管理
+%         \pause
+%         \item 空间信息可视化技术
+%         \pause
+%         \item 空间数据分析挖掘和网络服务技术
+%         \end{itemize}
+%         \end{column}
+%    \end{columns}
+% \end{frame}
 
-\begin{frame}{绪论}
-    \textbf{移动互联网发展(LBS)}
+% \begin{frame}{绪论}
+%     \textbf{移动互联网发展(LBS)}
 
-    打车软件、O2O软件、社交网络软件
+%     打车软件、O2O软件、社交网络软件
 
-    \vspace{2em}
-    \pause
-    \textbf{意义}
-    \begin{itemize}
-        \pause
-        \item 对个人而言，对社交空间数据挖掘，可以发现不同的知识，为生活带来 便利
-        \pause
-        \item 对商业公司而言，通过空间数据挖掘发现目标客户使用习惯或群体性活 动规律，对商业推广计划提出指导性意见
-        \pause
-        \item 对政府决策部门而言，能够发现社会的经济、文化、交通等众多方面活动规律
-    \end{itemize}
-\end{frame}
+%     \vspace{2em}
+%     \pause
+%     \textbf{意义}
+%     \begin{itemize}
+%         \pause
+%         \item 对个人而言，对社交空间数据挖掘，可以发现不同的知识，为生活带来 便利
+%         \pause
+%         \item 对商业公司而言，通过空间数据挖掘发现目标客户使用习惯或群体性活 动规律，对商业推广计划提出指导性意见
+%         \pause
+%         \item 对政府决策部门而言，能够发现社会的经济、文化、交通等众多方面活动规律
+%     \end{itemize}
+% \end{frame}
 
+% \begin{frame}[c]{绪论}
+% \alert{海量数据处理}
 
-\section{相关技术}
-\section{Spatial-Spark}
-\section{POI空间分析}
-\section{人口流动网络分析}
-\section{总结}
+% 业界使用Hadoop并行计算框架，但是存在处理速度慢、计算抽象层次较低等缺陷。
+
+% \pause
+% Spark是新型的并行计算框架，内存计算速度快，算子表现力丰富。但是对空间数据类型和空间数据操作支持不够。
+
+% \vspace{2em}
+
+% \pause
+% \alert{并行化算法设计}
+
+% 空间数据挖掘算法并没有针对并行化计算框架进行设计。
+
+% \end{frame}
+
+% \begin{frame}[c]{绪论}
+%     \includegraphics[scale=0.3]{figures/technology_route.pdf}
+% \end{frame}
+\include{body/chap1}
+\include{body/chap2}
+\include{body/chap3}
+\include{body/chap4}
+\include{body/chap5}
+\include{body/chap6}
+
+% \section{相关技术}
+% \section{Spatial-Spark}
+% \section{POI空间分析}
+% \section{人口流动网络分析}
+% \section{总结}
 \section*{参考文献}
 \end{document}
