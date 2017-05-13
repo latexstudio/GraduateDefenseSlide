@@ -11,8 +11,16 @@
 \usepackage{makecell}
 \usepackage{tikz}
 \usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algorithmic}
 \usetikzlibrary{matrix,calc,shapes,backgrounds,patterns,positioning,decorations.pathreplacing}
 
+\floatname{algorithm}{算法}
+%\newcommand\forthsection[1]{\noindent \S #1}
+\renewcommand{\algorithmicrequire}{ \textbf{输入:}} %Use Input in the format of Algorithm  
+\renewcommand{\algorithmicensure}{ \textbf{输出:}} %UseOutput in the format of Algorithm
+% \renewcommand\theequation{\arabic{chapter}-\arabic{equation}}
+\renewcommand{\thealgorithm}{}
 
 \title{基于Spatial-Spark网络空间海量数据分析与挖掘}
 \author[高峰]{
