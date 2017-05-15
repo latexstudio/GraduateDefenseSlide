@@ -3,16 +3,16 @@
 \subsection{Hadoop}
 
 \begin{frame}[t]{相关技术(Hadoop)}
-    \textbf{Hadoop}是Apache基金会推出的大数据计算平台，其中HDFS(Hadoop Distributed File System)
-    是Hadoop数据存储基础
-
+    \textbf{Hadoop}是Apache基金会推出的大数据计算平台
+    
     \pause
+    HDFS(Hadoop Distributed File System)
+
     \includegraphics[scale=0.8]{figures/hdfs.pdf}
 \end{frame}
 
 \begin{frame}[t]{相关技术(Hadoop)}
-    \textbf{Hadoop MapReduce}是Hadoop平台的计算框架，开发人员只需要关注Map函数和Reduce函数就可
-    以实现分布式计算
+    \textbf{Hadoop MapReduce}
 
     \pause
     \includegraphics[scale=0.4]{figures/mapreduce.pdf}
@@ -30,7 +30,7 @@
     \begin{columns}
         % one column
         \begin{column}{0.5 \textwidth}
-            \textbf{Spark}是AMP实验室打造的开源的并行计算框架，拥有完整的技术生态系统。
+            \textbf{Spark}技术生态系统。
 
             \vspace{0.5em}
             \begin{figure}
@@ -53,17 +53,16 @@
     \end{columns}
 \end{frame}
 
-\begin{frame}[c]{相关技术(Spark)}
+\begin{frame}[t]{相关技术(Spark)}
     弹性分布式数据集(RDD)是Spark的核心抽象，在内存中已被分区、只读的、并提供
-    一组丰富的操作方式的数据\textbf{集合}。RDD选择血统机制来提高系统的容错性，
-    一旦数据出错，通过血统可以迅速恢复。
+    一组丰富的操作方式的数据\textbf{集合}。
 
-    \vspace{0.5em}
+    \vspace{2em}
     \pause
-    RDD提供了丰富的接口来操作数据集合，主要分为两种:
+    \alert{RDD算子}
     \begin{itemize}
-        \item \textbf{Transformation:} 可以理解为认为分配的过程，返回值仍然是一个RDD，采用Lazy策略
-        \item \textbf{Action:} 将RDD持久化起来，将Tansformation的分配的操作执行
+        \item \textbf{Transformation} 
+        \item \textbf{Action}
     \end{itemize}
 
 \end{frame}
@@ -106,15 +105,14 @@
     \end{figure}
 \end{frame}
 
-\begin{frame}[c,c]{微博数据接口}
-    微博API接口实际上是一系列HTTP GET请求，返回微博用户上传的数据，其中包含了
-    用户位置数据。
+\begin{frame}[t]{微博数据接口}
+    \alert{HTTP Get}请求
 
     \vspace{0.5em}
     \pause
     \begin{itemize}
     \item location/geo/address\_to\_geo $\rightarrow$  根据地址返回地理信息坐标 
-    \item location/pois/show\_batc $\rightarrow$ 批量获取POI点的信息
+    \item location/pois/show\_batch $\rightarrow$ 批量获取POI点的信息
     \item location/citycode $\rightarrow$ 城市代码对应表
     \item place/nearby/pois $\rightarrow$ 获取附近的POI点
     \end{itemize}
