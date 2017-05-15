@@ -38,28 +38,55 @@
     \textbf{意义}
     \begin{itemize}
         \pause
-        \item 对个人而言，对社交空间数据挖掘，可以发现不同的知识，为生活带来 便利
+        \item 对个人而言(智慧生活)
         \pause
-        \item 对商业公司而言，通过空间数据挖掘发现目标客户使用习惯或群体性活 动规律，对商业推广计划提出指导性意见
+        \item 对商业公司而言(智慧商业)
         \pause
-        \item 对政府决策部门而言，能够发现社会的经济、文化、交通等众多方面活动规律
+        \item 对政府决策部门而言(智慧政府)
     \end{itemize}
 \end{frame}
 
-\begin{frame}[c]{绪论}
-\alert{海量数据处理}
+\begin{frame}[t]{绪论}
+% \alert{海量数据处理}
 
-业界使用Hadoop并行计算框架，但是存在处理速度慢、计算抽象层次较低等缺陷。
+% 业界使用Hadoop并行计算框架，但是存在处理速度慢、计算抽象层次较低等缺陷。
 
-\pause
-Spark是新型的并行计算框架，内存计算速度快，算子表现力丰富。但是对空间数据类型和空间数据操作支持不够。
+% \pause
+% Spark是新型的并行计算框架，内存计算速度快，算子表现力丰富。但是对空间数据类型和空间数据操作支持不够。
 
-\vspace{2em}
+\begin{columns}
+    \begin{column}{0.4 \textwidth}
 
-\pause
-\alert{并行化算法设计}
+        \begin{center}
+        \alert{海量数据处理}
 
-空间数据挖掘算法并没有针对并行化计算框架进行设计。
+        \vspace{1em}
+        \includegraphics[height=3.5cm]{figures/seaamountdata.jpeg}
+        \end{center}
+
+
+    \end{column}
+
+    \pause
+    \begin{column}{0.6 \textwidth}
+
+        \begin{center}
+            \alert{并行计算}
+
+            \vspace{1em}
+            \includegraphics[height=3.5cm]{figures/parallelcomputation.png}
+        \end{center}
+       
+    \end{column}
+
+\end{columns}
+
+% \vspace{2em}
+
+% \pause
+% \alert{并行化算法设计}
+
+% 空间数据挖掘算法并没有针对并行化计算框架进行设计。
 
 \end{frame}
 
