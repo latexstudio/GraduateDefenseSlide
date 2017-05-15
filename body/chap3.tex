@@ -2,12 +2,13 @@
 
 \subsection{空间数据分析处理}
 
-\begin{frame}[c]{Spatial-Spark}
+\begin{frame}[t]{Spatial-Spark}
     \begin{columns}
         %Transform and projection
-        \begin{column}{0.5 \textwidth}
-            Proj.4是开源的GIS中著名的地图投影库，其中Proj4j是Java语言版本
-            主要包含以下几个主要模块
+        \begin{column}{0.4 \textwidth}
+
+            \begin{center}
+            \alert{Proj.4}
 
             \begin{itemize}
                 \item 空间椭球基础
@@ -15,18 +16,23 @@
                 \item 空间投影系统
                 \item 坐标换算
             \end{itemize}
+            \end{center}
+            
         \end{column}
         % JTS
         \pause
-        \begin{column}{0.5 \textwidth}
-            JTS Topogy Suite是一套开源的空间几何对象拓扑分析包
-            主要包含了
+        \begin{column}{0.6 \textwidth}
 
-            \begin{itemize}
-                \item OGC定义的简单空间要素类型
-                \item 完整的、精确的空间数据分析和空间运算
-                \item 常见的空间数据读写
-            \end{itemize}
+            \begin{center}
+             \alert{JTS Topogy Suite}
+
+                \begin{itemize}
+                \item 简单空间要素类型
+                \item 空间数据分析和空间运算
+                \item 空间数据读写
+                \end{itemize}
+            \end{center}
+           
         \end{column}
     \end{columns}
 \end{frame}
@@ -46,8 +52,9 @@
 \end{frame}
 
 \begin{frame}[c]{RDD空间扩展}
-    通过RDD将将点、线和面封装成PointRDD、LineRDD和PolygonRDD，主要有两种
-    方式生成Spatial-RDD。
+    PointRDD、LineRDD和PolygonRDD
+
+    Spatial-RDD
     \pause
     \begin{itemize}
         \item HDFS中读取
@@ -63,7 +70,7 @@
 \begin{frame}[c]{RDD空间扩展}
     \begin{columns}
         \begin{column}{0.6 \textwidth}
-        好的空间索引能够加快空间数据查询，最常用的是R树
+        R树空间索引
 
         \vspace{1em}
         \includegraphics[scale=0.4]{figures/rtree.pdf}
