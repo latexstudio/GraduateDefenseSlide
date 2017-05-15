@@ -105,27 +105,42 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}[c]{POI空间分析(同位模式)}
-    单主题空间关联规则
+\begin{frame}[t]{POI空间分析(同位模式)}
 
-    \begin{equation}
+    \begin{alert}{单主题空间关联规则}
+     \begin{equation}
         P_1\wedge P_2\wedge \ldots \wedge P_m \rightarrow Q_1\wedge Q_2\wedge \ldots \wedge Q_n(s\%, c\%)
     \end{equation}
-    其中$P_i$和$Q_j$中至少有一个为空间谓词
+    \end{alert}
+    % % 单主题空间关联规则
+
+    \begin{alert}{多主题同位模式}
+            \begin{equation}
+                R(a_1,b_1) \Leftrightarrow (distance(a_1,b_1)\le d)
+            \end{equation}
+
+            \pause
+            \begin{figure}
+                \centering
+                \includegraphics[scale=1.0]{figures/spatialrelation.pdf}
+            \end{figure}
+    \end{alert}
+
+    % 其中$P_i$和$Q_j$中至少有一个为空间谓词
 \end{frame}
 
-\begin{frame}[c]{POI空间分析(同位模式)}
-    多主题同位模式
-    \begin{equation}
-        R(a_1,b_1) \Leftrightarrow (distance(a_1,b_1)\le d)
-    \end{equation}
+% \begin{frame}[c]{POI空间分析(同位模式)}
+%     多主题同位模式
+%     \begin{equation}
+%         R(a_1,b_1) \Leftrightarrow (distance(a_1,b_1)\le d)
+%     \end{equation}
 
-    \pause
-    \begin{figure}
-        \centering
-        \includegraphics[scale=1.0]{figures/spatialrelation.pdf}
-    \end{figure}
-\end{frame}
+%     \pause
+%     \begin{figure}
+%         \centering
+%         \includegraphics[scale=1.0]{figures/spatialrelation.pdf}
+%     \end{figure}
+% \end{frame}
 
 \begin{frame}[c]{POI空间分析(同位模式)}
     \begin{columns}
