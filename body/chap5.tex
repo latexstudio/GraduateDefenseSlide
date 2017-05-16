@@ -139,7 +139,7 @@
         \item \textbf{城市权重在流动网络层级分布}
 
         北京为第一个层级；成都、上海、西安、广州和武汉为第二层级；杭州、郑州、深圳、重庆
-        和厦门为第三个层级；哈尔滨、南京、长沙、沈阳和天津为的哥层级；
+        和厦门为第三个层级；哈尔滨、南京、长沙、沈阳和天津为第三层级；
 
         \pause
         \item \textbf{东部城市与中西部城市权重的差异明显}
@@ -155,25 +155,40 @@
 
 \begin{frame}[t]{人口流动网络分析(社群挖掘)}
     \small
-    将复杂网络划分若干个子社群
 
-    \pause
-    \alert{模块值法}
-
-    \begin{equation}
-        Q=\frac{1}{2m}\displaystyle{\sum_{vw}\big(W_{vw}-P_{vw}\delta(C_v,C_w)\big)}
-    \end{equation}
-
+    \begin{alert}{模块值}
+        \begin{equation}
+            Q=\frac{1}{2m}\displaystyle{\sum_{vw}\big(W_{vw}-P_{vw}\delta(C_v,C_w)\big)}
+        \end{equation}
+    \end{alert}
     其中$W_{vw}$为网络中节点$v$和节点$w$之间的权重；$m$为权重之和；$P_{vw}$为零模型中节点之间的期望权重；$C_v$表示节点$v$所属的社群
-的类别，如果节点$v$和节点$w$所属同一个社群，则$\delta(C_v,C_w)$为1，否则为0。
+的类别，如果节点$v$和节点$w$所属同一个社群，则$\delta(C_v,C_w)$为1，否则为0
 
-    \pause
-    \alert{模块值更新}
-
-    \begin{equation}
+    \begin{alert}{模块值更新}
+        \begin{equation}
         \Delta Q_{AB}=Q_{AB}-Q_{A}-Q_{B}=\frac{1}{2m}\displaystyle{\sum_{a_i \in A, b_j \in B}}\bigg\{ \big( A_{ij} - \frac{k_ik_j}{2m} 
         \big) \times \delta \big[ r(i),r(j) \big] \bigg\}
-    \end{equation}
+        \end{equation}
+    \end{alert}
+%     将复杂网络划分若干个子社群
+
+%     \pause
+%     \alert{模块值法}
+
+%     \begin{equation}
+%         Q=\frac{1}{2m}\displaystyle{\sum_{vw}\big(W_{vw}-P_{vw}\delta(C_v,C_w)\big)}
+%     \end{equation}
+
+%     其中$W_{vw}$为网络中节点$v$和节点$w$之间的权重；$m$为权重之和；$P_{vw}$为零模型中节点之间的期望权重；$C_v$表示节点$v$所属的社群
+% 的类别，如果节点$v$和节点$w$所属同一个社群，则$\delta(C_v,C_w)$为1，否则为0。
+
+%     \pause
+%     \alert{模块值更新}
+
+%     \begin{equation}
+%         \Delta Q_{AB}=Q_{AB}-Q_{A}-Q_{B}=\frac{1}{2m}\displaystyle{\sum_{a_i \in A, b_j \in B}}\bigg\{ \big( A_{ij} - \frac{k_ik_j}{2m} 
+%         \big) \times \delta \big[ r(i),r(j) \big] \bigg\}
+%     \end{equation}
 \end{frame}
 %--- Next Frame ---%
 
