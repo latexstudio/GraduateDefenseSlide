@@ -113,7 +113,8 @@
     \end{equation}
     \end{alert}
     % % 单主题空间关联规则
-
+    
+    \pause
     \begin{alert}{多主题同位模式}
             \begin{equation}
                 R(a_1,b_1) \Leftrightarrow (distance(a_1,b_1)\le d)
@@ -208,7 +209,7 @@
 % \label{alg:seq}
 % \end{algorithm}
 \begin{algorithm}[H]
-\footnotesize
+\tiny
 \caption{co-location算法}
 \begin{algorithmic}[1]   
 \REQUIRE  ~~\\  
@@ -221,12 +222,16 @@
 \STATE $P_2$ = Spatial-Spark.join(points, d, threshold)
 \WHILE{$P_k$ is not empty and $k$ < N} 
 \pause
+\STATE // \alert{Join操作，RowPattern重写}
 \STATE $C_{k+1}$ = gen\_candinate\_cocolation($P_k$,$k$) $//$k+1阶候选集合
 \pause
-\STATE $C_{k+1}$ = pruning($C_{k+1}$) $//$剪枝处理
+\STATE // \alert{距离阈值比较}
+\STATE $C_{k+1}$ = pruning($C_{k+1}$, $d$)
 \pause
-\STATE $T_{k+1}$ = gen\_table\_ins(threshold, $C_{k+1}$)$//$生成表实例
+\STATE // \alert{reduce生成表实例}
+\STATE $T_{k+1}$ = gen\_table\_ins()$//$生成表实例
 \pause
+\STATE // \alert{threshold 筛选}
 \STATE $P_{k+1}$ = Select\_Colocation\_Pattern($T_{k+1}$, threshold) $//$ 筛选表实例
 \pause
 \STATE $k$ = $k+1$ $//$下一轮迭代
@@ -271,7 +276,7 @@
         \end{column}
 
         \begin{column}{0.333 \textwidth}
-        \alert{武汉}
+        \alert{武汉市}
         \vspace{1em}
 
         (高等院校,校园生活):0.531
@@ -341,30 +346,30 @@
     \begin{itemize}
         \footnotesize
         \pause
-        \item \textbf{二阶:}
+        \item \textbf{二阶(29)}
 
         (中餐厅,校园生活)，(校园生活,医院)，(甜品店,中餐厅)，(咖啡厅,校园生活)，(咖啡厅,酒吧)，(清真餐馆,酒吧) $\ldots$
 
         \pause
-        \item \textbf{三阶:}
+        \item \textbf{三阶(29)}
 
         (中餐厅,校园生活,医院)，(电影院,KTV,美容美发店)，
         (甜品店,中餐厅,美容美发店)，(美容美发店,酒吧,甜品店)，(中餐厅,校园生活,咖啡厅) $\ldots$
 
         \pause
-        \item \textbf{四阶:}
+        \item \textbf{四阶(19)}
 
         (电影院,KTV,咖啡厅,美容美发店)，(KTV,中餐厅,甜品店,美容美发店)，
         (甜品店,中餐厅,咖啡厅,美容美发店)，(甜品店,咖啡厅,美容美发店,酒吧)$\ldots$
 
         \pause
-        \item \textbf{五阶:}
+        \item \textbf{五阶(7)}
 
         电影院,KTV,咖啡厅,甜品店,美容美发店)，(KTV,中餐厅,咖啡厅,美容美发店,酒吧)，
         (甜品店,中餐厅,咖啡厅,美容美发店,酒吧)$\ldots$
 
         \pause
-        \item \textbf{六阶:}
+        \item \textbf{六阶(1)}
 
         (KTV,中餐厅,咖啡厅,甜品店,美容美发店,酒吧)
     \end{itemize}
