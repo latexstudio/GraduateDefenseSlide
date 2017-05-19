@@ -1,8 +1,59 @@
 \section{Spatial-Spark}
 
-\subsection{空间数据分析处理}
+% \subsection{空间数据分析处理}
 
-\begin{frame}[t]{Spatial-Spark}
+% \begin{frame}[t]{Spatial-Spark}
+%     \begin{columns}
+%         %Transform and projection
+%         \begin{column}{0.4 \textwidth}
+
+%             \begin{center}
+%             \alert{Proj.4}
+
+%             \begin{itemize}
+%                 \item 空间椭球基础
+%                 \item 空间参照系统
+%                 \item 空间投影系统
+%                 \item 坐标换算
+%             \end{itemize}
+%             \end{center}
+            
+%         \end{column}
+%         % JTS
+%         \pause
+%         \begin{column}{0.6 \textwidth}
+
+%             \begin{center}
+%              \alert{JTS Topogy Suite}
+
+%                 \begin{itemize}
+%                 \item 简单空间要素类型
+%                 \item 空间数据分析和空间运算
+%                 \item 空间数据读写
+%                 \end{itemize}
+%             \end{center}
+           
+%         \end{column}
+%     \end{columns}
+% \end{frame}
+
+\subsection{Spatial-Spark}
+
+
+\begin{frame}[c]{体系结构}
+    \begin{center}
+        \alert{Spatial-Spark体系结构}
+    
+
+    \vspace{1em}
+    \begin{figure}
+        \includegraphics[scale=1.0]{figures/spatialspark.pdf}
+    \end{figure}
+    \end{center}
+\end{frame}
+
+
+\begin{frame}[t]{辅助模块}
     \begin{columns}
         %Transform and projection
         \begin{column}{0.4 \textwidth}
@@ -37,20 +88,6 @@
     \end{columns}
 \end{frame}
 
-\subsection{RDD空间扩展}
-
-\begin{frame}[c]{RDD空间扩展}
-    \begin{center}
-        \alert{Spatial-Spark体系结构}
-    
-
-    \vspace{1em}
-    \begin{figure}
-        \includegraphics[scale=1.0]{figures/spatialspark.pdf}
-    \end{figure}
-    \end{center}
-\end{frame}
-
 \begin{frame}[c]{RDD空间扩展}
     PointRDD、LineRDD和PolygonRDD
 
@@ -67,7 +104,7 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}[c]{RDD空间扩展}
+\begin{frame}[c]{空间索引}
     \begin{columns}
         \begin{column}{0.6 \textwidth}
         R树空间索引
@@ -93,7 +130,7 @@
     \end{columns}
 \end{frame}
 
-\begin{frame}[c]{RDD空间扩展}
+\begin{frame}[c]{空间查询}
     \begin{itemize}
         \item \alert{空间拓扑查询}
     \end{itemize}
